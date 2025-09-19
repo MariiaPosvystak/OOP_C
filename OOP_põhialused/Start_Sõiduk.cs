@@ -15,7 +15,7 @@ namespace OOP_põhialused
                     List<ISõiduk> sõidukid = new List<ISõiduk>();
                 while (true)
                 {
-                    Console.WriteLine("\nVali sõiduk: 1=Auto, 2=Jalgratas, 3=Buss, 4=Mootorratas, 0=Välju");
+                    Console.WriteLine("Vali sõiduk: 1=Auto, 2=Jalgratas, 3=Buss, 4=Mootorratas, 0=Välju");
                     string valik = Console.ReadLine();
                     if (valik == "0") break;
                     switch (valik)
@@ -53,13 +53,13 @@ namespace OOP_põhialused
                             break;
                     }
                 }
-                Console.WriteLine("\n--- Sõidukite tulemused ---");
+                Console.WriteLine("--- Sõidukite tulemused ---");
                 foreach (var sõiduk in sõidukid)
                 {
                     Console.WriteLine($"Sõiduki vahemaa: {sõiduk.ArvutaVahemaa()} km, Kulu: {sõiduk.ArvutaKulu()} liitrit");
                 }
                 double kogukulu = sõidukid.Sum(s => s.ArvutaKulu());
-                Console.WriteLine($"\nKogu kulu kõikide sõidukite peale kokku: {kogukulu} liitrit");
+                Console.WriteLine($"Kogu kulu kõikide sõidukite peale kokku: {kogukulu} liitrit");
             }
             catch (FormatException)
             {
