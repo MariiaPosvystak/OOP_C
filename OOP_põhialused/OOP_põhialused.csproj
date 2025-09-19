@@ -5,7 +5,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>OOP_põhialused.Startclass</StartupObject>
+    <StartupObject>OOP_põhialused.Start_Sõiduk</StartupObject>
   </PropertyGroup>
 
 </Project>
