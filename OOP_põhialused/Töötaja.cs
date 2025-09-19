@@ -9,6 +9,8 @@ namespace OOP_põhialused
     public class Töötaja : Inimene
     {
         public string Ametikoht = "Keevitaja";
+        public double Tunnitasu = 15.50;
+        public int Tunnid { get; set; }
 
         public void Töötan()
         {
@@ -18,5 +20,9 @@ namespace OOP_põhialused
         {
             Console.WriteLine($"{Nimi} töötan töö");
         }
+        public double ArvutaPalk()
+        {
+            return Tunnitasu * Tunnid;
+        }  
     }
 }

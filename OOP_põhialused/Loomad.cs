@@ -6,38 +6,79 @@ using System.Threading.Tasks;
 
 namespace OOP_põhialused
 {
-    public class Loomad
+    public abstract class Loomad
     {
         public string Nimi;
         public int Vanus;
+        public string Liik;
+
         public Loomad() { }
-        public Loomad(string nimi, int vanus)
+        public Loomad(string nimi, int vanus, string liik)
         {
             Nimi = nimi;
             Vanus = vanus;
+            Liik = liik;
         }
 
         public void Tervita() //действие
         {
             Console.WriteLine("Tere! See on: " + Nimi);
         }
+        public abstract void TeeHääl();
+        public abstract void Tee();
+        public abstract void Sööma();
     }
     //доделать
-    public class Liinud : Loomad
+    public class Koer : Loomad
     {
-        public string Liik = "Kass";
-
-        public void Liiki()
+        public override void TeeHääl()
         {
-            Console.WriteLine($"{Nimi} linnu tõug on {Liik}.");
+            Console.WriteLine("Auh - auh!");
+        }
+
+        public override void Tee()
+        {
+            Console.WriteLine("Koer jookseb aeda.");
+        }
+
+        public override void Sööma()
+        {
+            Console.WriteLine("Koer sööb luud.");
         }
     }
-    public class Imetajad : Loomad
+
+    public class Linnud : Loomad
     {
-        public string Liik = "Koer";
-        public void Liikid()
+        public override void TeeHääl()
         {
-            Console.WriteLine($"{Nimi} imetaja tõug on {Liik}.");
+            Console.WriteLine("Kräu - kräu!");
+        }
+
+        public override void Tee()
+        {
+            Console.WriteLine("Lind lendab kõrgele.");
+        }
+
+        public override void Sööma()
+        {
+            Console.WriteLine("Lind sööb seemneid.");
+        }
+    }
+    public class Kala : Loomad
+    {
+        public override void TeeHääl()
+        {
+            Console.WriteLine("Blub blub!"); 
+        }
+
+        public override void Tee()
+        {
+            Console.WriteLine("Kala ujub veekogus.");
+        }
+
+        public override void Sööma()
+        {
+            Console.WriteLine("Kala sööb vetikaid või väikseid kalu.");
         }
     }
 }

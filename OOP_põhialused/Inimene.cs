@@ -10,11 +10,16 @@ namespace OOP_põhialused
     {
         public string Nimi;
         public int Vanus;
-        public Inimene() { }
+        public Pank KontoPank {  get; set; }
+        public Inimene() 
+        {
+            KontoPank = new Pank();
+        }
         public Inimene(string nimi, int vanus)
         {
             Nimi = nimi;
             Vanus = vanus;
+            KontoPank = new Pank();
         }
 
         public void Tervita() //действие
