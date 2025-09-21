@@ -19,5 +19,9 @@ namespace OOP_põhialused
         }
         public double ArvutaKulu() => ((Kütusekulu / 100) * Km) / ReisijateArv;
         public double ArvutaVahemaa() => Km;
+        public override string ToString()
+        {
+            return $"Buss: {Km} km, kütusekulu {Kütusekulu} l/100km, reisijaid {ReisijateArv}";
+        }
     }
 }

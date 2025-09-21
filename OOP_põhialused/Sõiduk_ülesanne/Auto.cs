@@ -17,5 +17,9 @@ namespace OOP_põhialused
         }
         public double ArvutaKulu() => (Kütusekulu / 100) * Km; // kulu liitrites
         public double ArvutaVahemaa() => Km; // vahemaa km
+        public override string ToString()
+        {
+            return $"Auto: {Km} km, kütusekulu {Kütusekulu} l/100km";
+        }
     }
 }

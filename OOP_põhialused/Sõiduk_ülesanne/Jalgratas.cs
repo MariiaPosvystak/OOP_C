@@ -9,12 +9,16 @@ namespace OOP_põhialused
 {
     internal class Jalgratas : ISõiduk
     {
-        public double Km { get; set; }
+        public double Km { get; }
         public Jalgratas(double km)
         {
             Km = km;
         }
-        public double ArvutaKulu() => 0; 
+        public double ArvutaKulu() => 0.0; 
         public double ArvutaVahemaa() => Km;
+        public override string ToString()
+        {
+            return $"Jalgratas: {Km} km, kütusekulu 0";
+        }
     }
 }

@@ -12,10 +12,10 @@ namespace OOP_põhialused
         {
             try
             { 
-                    List<ISõiduk> sõidukid = new List<ISõiduk>();
+                List<ISõiduk> sõidukid = new List<ISõiduk>();
                 while (true)
                 {
-                    Console.WriteLine("Vali sõiduk: 1=Auto, 2=Jalgratas, 3=Buss, 4=Mootorratas, 0=Välju");
+                    Console.WriteLine("Vali sõiduk: 1=Auto, 2=Jalgratas, 3=Buss, 4=Elektritõukeratas, 0=Välju");
                     string valik = Console.ReadLine();
                     if (valik == "0") break;
                     switch (valik)
@@ -42,12 +42,6 @@ namespace OOP_põhialused
                             sõidukid.Add(new Buss(bussKütusekulu, bussKm, reisijateArv));
                             break;
                         case "4":
-                            Console.Write("Sisesta mootorratta nimi: ");
-                            string nimi = Console.ReadLine();
-                            Console.Write("Sisesta mootorratta vanus (aastates): ");
-                            int vanus = int.Parse(Console.ReadLine());
-                            sõidukid.Add(new Mootorratas(nimi, vanus));
-                            break;
                         default:
                             Console.WriteLine("Vale valik, proovi uuesti.");
                             break;
