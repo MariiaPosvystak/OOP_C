@@ -16,7 +16,7 @@ namespace OOP_põhialused
                 List<ISõiduk> sõidukid = new List<ISõiduk>();
 
                 Console.WriteLine("Kas soovid laadida andmed failist (jah/ei)?");
-                string laadiFailist = Console.ReadLine()?.Trim().ToLower();
+                string laadiFailist = Console.ReadLine().ToLower();
 
                 string failinimi = @"..\..\..\andmed.txt";
 

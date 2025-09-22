@@ -100,7 +100,8 @@ namespace OOP_põhialused
                 Console.WriteLine($"Pindala: {kujund.ArvutaPindala():F2}, Ümbermõõt: {kujund.ArvutaÜmbermõõt():F2}");
             }
 
-            //4, 5-Создайте свой основной класс и 2 подкласса и используйте их здесь.
+
+            //Ülesanne 1 ja 2
             ////доделать
             //Koer koer1 = new Koer();
             //koer1.Nimi = "Kohev";
